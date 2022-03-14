@@ -10,6 +10,8 @@ from sys import exit
 # Dependencies
 Dependencies = input("Update & Install Dependencies? Y/N \> ").lower()
 if Dependencies == "y":
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'wheel'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'json_minify'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'colorama'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'art'])
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'lolpython'])
